@@ -10,23 +10,20 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-);
+ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 export default function ResultChart({ scores }) {
-  const labels = Object.keys(scores);
+  
+  const defaultScores = { GDPR: 0, PECR: 0, DUAA: 0 };
+  const finalScores = { ...defaultScores, ...scores };
+
+  const labels = Object.keys(finalScores);
   const data = {
     labels,
     datasets: [
       {
         label: "Compliance Score",
-        data: labels.map((k) => scores[k]),
+        data: labels.map((k) => finalScores[k]),
         fill: true,
         backgroundColor: "rgba(30, 111, 179, 0.3)",
         borderColor: "#1e6fb3",
