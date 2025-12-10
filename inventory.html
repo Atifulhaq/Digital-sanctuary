@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sanctuary – Compliance Portal</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body class="page page-inventory">
+    <header class="top-bar">
+        <div class="logo-area">
+            <div class="logo-circle">DS</div>
+            <div class="logo-text">
+                <span class="logo-title">Digital Sanctuary</span>
+                <span class="logo-subtitle">Compliance Inventory Portal</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory Diagram</a>
+            <a href="questionnaire.html">Questionnaire</a>
+            <a href="results.html">Reports</a>
+            <a href="login.html" class="nav-login">Login</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Configuration Inventory Diagram</h1>
+        <p class="page-intro">
+            This view represents the client&apos;s compliance status across their key technical assets.
+            Each node shows whether the asset processes private data and its current security status.
+        </p>
+
+        <div class="diagram-legend">
+            <span><span class="legend-dot legend-good"></span>Compliant</span>
+            <span><span class="legend-dot legend-warning"></span>Needs review</span>
+            <span><span class="legend-dot legend-risk"></span>High risk</span>
+        </div>
+
+        <section class="inventory-diagram">
+            <div class="diagram-column">
+                <h2>Endpoints</h2>
+                <div class="diagram-node good">
+                    <h3>Staff Laptops</h3>
+                    <p>Encrypted, MFA enabled, monthly patching.</p>
+                    <p class="node-meta">Private data: <strong>Yes</strong></p>
+                </div>
+                <div class="diagram-node warning">
+                    <h3>Shared Desktops</h3>
+                    <p>Shared login accounts, no auto-lock policy.</p>
+                    <p class="node-meta">Private data: <strong>Possible</strong></p>
+                </div>
+            </div>
+
+            <div class="diagram-column diagram-column-center">
+                <h2>Servers &amp; Storage</h2>
+                <div class="diagram-node good">
+                    <h3>Application Servers</h3>
+                    <p>Hardened builds, restricted admin access, daily backups.</p>
+                    <p class="node-meta">Private data: <strong>Yes</strong></p>
+                </div>
+                <div class="diagram-node risk">
+                    <h3>File Shares</h3>
+                    <p>Legacy access groups, no data classification, limited logging.</p>
+                    <p class="node-meta">Private data: <strong>Unknown</strong></p>
+                </div>
+            </div>
+
+            <div class="diagram-column">
+                <h2>Network</h2>
+                <div class="diagram-node good">
+                    <h3>Corporate LAN</h3>
+                    <p>Segmented VLANs, firewalls, IDS in place.</p>
+                    <p class="node-meta">Private data: <strong>Transit only</strong></p>
+                </div>
+                <div class="diagram-node warning">
+                    <h3>Remote Access VPN</h3>
+                    <p>MFA for most users, some legacy accounts remain.</p>
+                    <p class="node-meta">Private data: <strong>Yes</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="diagram-notes">
+            <h2>How to use this diagram</h2>
+            <ol>
+                <li>Add each asset from the questionnaire into the relevant column.</li>
+                <li>Assign a status (Compliant / Needs review / High risk) based on answers.</li>
+                <li>Highlight assets that handle private data or where this is unknown.</li>
+            </ol>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>© 2025 Team 14 – Digital Sanctuary. All rights reserved.</p>
+    </footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

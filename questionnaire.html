@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Configuration questionnaire · Digital Sanctuary</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="main-shell">
+  
+<header class="page">
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo-pill">DS</div>
+      <div>
+        <div class="brand-text-main">Digital Sanctuary</div>
+        <div class="brand-text-sub">Configuration &amp; Compliance Inventory</div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="tag-chip">
+        <span class="meta-dot"></span>
+        Team 14 &bull; Front-end
+      </span>
+      <a href="login.html" class="btn btn-ghost" style="padding-inline:14px;font-size:12px;">Log in</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="page">
+    <section class="auth-shell">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">Configuration inventory questionnaire</h1>
+          <p class="card-subtitle">
+            Capture the key details for each computer, server, network or storage device, including
+            whether it handles private information and how it is secured. This layout mirrors what can
+            later be reproduced in Google Forms.
+          </p>
+        </div>
+
+        <div class="sub-header-row">
+          <div class="sub-chip">Step 1 &mdash; Identify the asset</div>
+          <div class="sub-chip">Step 2 &mdash; Data privacy</div>
+          <div class="sub-chip">Step 3 &mdash; Security controls</div>
+          <div class="sub-chip">Step 4 &mdash; Compliance status</div>
+        </div>
+
+        <form class="form-grid">
+          <div class="field">
+            <label class="label" for="asset-id">Asset name / ID</label>
+            <input class="input" id="asset-id" type="text" placeholder="Example: HR-LAP-07 or FIN-SQL-01" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="asset-type">Asset type</label>
+            <select id="asset-type" class="select">
+              <option value="">Choose type</option>
+              <option>Computer (laptop / desktop)</option>
+              <option>Server</option>
+              <option>Network device (firewall, router, switch, Wi‑Fi)</option>
+              <option>Storage device / system (NAS, SAN, cloud bucket)</option>
+              <option>Other technical asset</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label" for="location">Physical / logical location</label>
+            <input class="input" id="location" type="text" placeholder="Example: London DC, Rack 3 / Azure UK South" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="owner">Primary asset owner</label>
+            <input class="input" id="owner" type="text" placeholder="Name or team responsible" />
+          </div>
+
+          <hr style="border:0;border-top:1px solid rgba(31,41,55,0.9);margin:4px 0 2px;" />
+
+          <div class="field">
+            <label class="label">Does this asset process or store private / sensitive data?</label>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="radio" name="private-data" class="checkbox" />
+                <span>Yes &mdash; private or identifiable personal data</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="radio" name="private-data" class="checkbox" />
+                <span>No &mdash; no private or identifiable data</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="radio" name="private-data" class="checkbox" />
+                <span>Unsure &mdash; needs clarification</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="data-types">If yes, what type of data?</label>
+            <textarea id="data-types" class="textarea" placeholder="Examples: HR records, customer payment data, medical information, internal financial reports"></textarea>
+          </div>
+
+          <hr style="border:0;border-top:1px solid rgba(31,41,55,0.9);margin:4px 0 2px;" />
+
+          <div class="field">
+            <label class="label">Security measures in place</label>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="checkbox" class="checkbox" />
+                <span>Access controlled (unique logins / role-based access)</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="checkbox" class="checkbox" />
+                <span>Encryption at rest</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="checkbox" class="checkbox" />
+                <span>Encryption in transit (TLS / VPN)</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="checkbox" class="checkbox" />
+                <span>Regular patching / updates applied</span>
+              </label>
+            </div>
+            <div class="field-inline">
+              <label class="checkbox-row">
+                <input type="checkbox" class="checkbox" />
+                <span>Backups tested</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="open-risks">Known issues or risks</label>
+            <textarea id="open-risks" class="textarea" placeholder="Example: end‑of‑life operating system, missing patches, physical access not restricted"></textarea>
+          </div>
+
+          <div class="field">
+            <label class="label" for="compliance-status">Current compliance status</label>
+            <select id="compliance-status" class="select">
+              <option value="">Select status</option>
+              <option>Compliant</option>
+              <option>Partially compliant &mdash; improvements planned</option>
+              <option>Non‑compliant &mdash; requires immediate action</option>
+              <option>Unknown &mdash; pending review</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="label" for="review-date">Last review / audit date</label>
+            <input class="input" id="review-date" type="date" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="notes">Additional notes for this asset</label>
+            <textarea id="notes" class="textarea" placeholder="Any extra context about how the asset is used or why it is important."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:4px;">Save asset record</button>
+        </form>
+
+        <p class="mt-md" style="font-size:12px;color:#9ca3af;">
+          Google Forms option: if preferred, these questions can be copied directly into a Google Form
+          using the same structure (Asset details → Data privacy → Security → Compliance status), while
+          this page remains as a reference for the agreed information design.
+        </p>
+      </div>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  Built for LSBU · Client: Digital Sanctuary · Team 14
+</footer>
+
+</div>
+</body>
+</html>

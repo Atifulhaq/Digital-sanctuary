@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create account · Digital Sanctuary</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="main-shell">
+  
+<header class="page">
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo-pill">DS</div>
+      <div>
+        <div class="brand-text-main">Digital Sanctuary</div>
+        <div class="brand-text-sub">Configuration &amp; Compliance Inventory</div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="tag-chip">
+        <span class="meta-dot"></span>
+        Team 14 &bull; Front-end
+      </span>
+      <a href="login.html" class="btn btn-ghost" style="padding-inline:14px;font-size:12px;">Log in</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="page">
+    <div class="auth-shell">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">Create an account</h1>
+          <p class="card-subtitle">
+            Set up access for team members who will record computers, servers, network and storage
+            devices on behalf of the client.
+          </p>
+        </div>
+        <form class="form-grid">
+          <div class="field">
+            <label class="label" for="name">Full name</label>
+            <input class="input" id="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label class="label" for="org">Organisation / client team</label>
+            <input class="input" id="org" type="text" placeholder="Example: Finance, HR, IT Ops" />
+          </div>
+          <div class="field">
+            <label class="label" for="role">Role</label>
+            <input class="input" id="role" type="text" placeholder="Example: Asset owner, Security analyst" />
+          </div>
+          <div class="field">
+            <label class="label" for="email-signup">Work email</label>
+            <input class="input" id="email-signup" type="email" placeholder="name@example.com" required />
+          </div>
+          <div class="field">
+            <label class="label" for="password-signup">Password</label>
+            <input class="input" id="password-signup" type="password" placeholder="Create a strong password" required />
+          </div>
+          <div class="field">
+            <label class="label" for="confirm-password">Confirm password</label>
+            <input class="input" id="confirm-password" type="password" placeholder="Repeat password" required />
+          </div>
+          <div class="field-inline">
+            <label class="checkbox-row">
+              <input type="checkbox" class="checkbox" />
+              <span>I confirm I am authorised to register assets for this client.</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:4px;">Create account</button>
+        </form>
+        <p class="mt-sm" style="font-size:12px;color:#9ca3af;">
+          Already have an account?
+          <a href="login.html" style="color:#4ade80;">Log in</a>
+        </p>
+      </div>
+    </div>
+  </main>
+  
+<footer class="site-footer">
+  Built for LSBU · Client: Digital Sanctuary · Team 14
+</footer>
+
+</div>
+</body>
+</html>

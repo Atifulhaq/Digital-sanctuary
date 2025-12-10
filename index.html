@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Digital Sanctuary · Asset Compliance Inventory</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="main-shell">
+  
+<header class="page">
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo-pill">DS</div>
+      <div>
+        <div class="brand-text-main">Digital Sanctuary</div>
+        <div class="brand-text-sub">Configuration &amp; Compliance Inventory</div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="tag-chip">
+        <span class="meta-dot"></span>
+        Team 14 &bull; Front-end
+      </span>
+      <a href="login.html" class="btn btn-ghost" style="padding-inline:14px;font-size:12px;">Log in</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="page">
+    <section class="hero-grid">
+      <div>
+        <h1 class="hero-heading">
+          Map every <span class="hero-highlight">technical asset</span><br/>
+          and its compliance status in one view.
+        </h1>
+        <p class="hero-sub">
+          Front-end prototype for recording computers, servers, network and storage devices, and
+          determining whether each asset is private and secure. Designed to align with the latest
+          client feedback &mdash; ready for integration with your back-end or Google Forms workflow.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-pill">
+            <span class="meta-dot"></span>
+            Asset inventory diagram &amp; questionnaire
+          </div>
+          <div class="meta-pill">
+            • Computers • Servers • Network • Storage
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="questionnaire.html" class="btn btn-primary">
+            Open configuration questionnaire
+          </a>
+          <a href="results.html" class="btn btn-ghost">
+            View compliance overview
+          </a>
+        </div>
+
+        <p class="hero-footnote">
+          Prefer Google Forms? Use this questionnaire as the information model and mirror the same
+          sections and fields in a Google Form, as requested by the client.
+        </p>
+      </div>
+
+      <aside class="hero-panel" aria-label="Configuration inventory snapshot">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Configuration inventory snapshot</div>
+            <div class="panel-subtitle">Example data for demonstration only</div>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+
+        <div class="asset-summary-grid">
+          <div class="asset-chip">
+            <div class="asset-label">Registered assets</div>
+            <div class="asset-value">128</div>
+            <div class="asset-trend">+12 new this month</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">High-risk assets</div>
+            <div class="asset-value">7</div>
+            <div class="asset-trend bad">3 require immediate action</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">Private-data systems</div>
+            <div class="asset-value">42</div>
+            <div class="asset-trend">Encryption verified on 38</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">Unscanned devices</div>
+            <div class="asset-value">5</div>
+            <div class="asset-trend bad">Schedule follow-up review</div>
+          </div>
+        </div>
+
+        <div class="compliance-bar-shell">
+          <div class="compliance-row">
+            <span>Overall compliance</span>
+            <span>86%</span>
+          </div>
+          <div class="compliance-bar">
+            <div class="compliance-fill"></div>
+          </div>
+        </div>
+
+        <div class="inventory-table-wrapper">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Type</th>
+                <th>Private data</th>
+                <th>Secure?</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FIN-SQL-01</td>
+                <td>Server</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td><span class="inventory-tag tag-good">Compliant</span></td>
+              </tr>
+              <tr>
+                <td>HR-LAP-07</td>
+                <td>Computer</td>
+                <td>Yes</td>
+                <td>Partial</td>
+                <td><span class="inventory-tag tag-watch">Review</span></td>
+              </tr>
+              <tr>
+                <td>EDGE-FW-01</td>
+                <td>Network</td>
+                <td>No</td>
+                <td>Unknown</td>
+                <td><span class="inventory-tag tag-risk">At risk</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel-footer">
+          <div class="panel-footer-text">
+            This panel is a static example only and can be wired to your back-end or reporting logic.
+          </div>
+          <a href="results.html" class="btn btn-ghost" style="padding-inline:14px;font-size:11px;">Results view</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  Built for LSBU · Client: Digital Sanctuary · Team 14
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compliance overview · Digital Sanctuary</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div class="main-shell">
+  
+<header class="page">
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo-pill">DS</div>
+      <div>
+        <div class="brand-text-main">Digital Sanctuary</div>
+        <div class="brand-text-sub">Configuration &amp; Compliance Inventory</div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="tag-chip">
+        <span class="meta-dot"></span>
+        Team 14 &bull; Front-end
+      </span>
+      <a href="login.html" class="btn btn-ghost" style="padding-inline:14px;font-size:12px;">Log in</a>
+    </div>
+  </nav>
+</header>
+
+  <main class="page">
+    <section class="hero-grid">
+      <div>
+        <h1 class="hero-heading">
+          Compliance overview for <span class="hero-highlight">technical assets</span>
+        </h1>
+        <p class="hero-sub">
+          Static report-style view that can later be populated from the stored questionnaire data
+          (database, CSV export or Google Form responses). Intended to visually summarise the client's
+          compliance status across computers, servers, network and storage devices.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-pill">
+            <span class="meta-dot"></span>
+            128 assets · 86% compliant
+          </div>
+          <div class="meta-pill">
+            7 high-risk · 18 under review
+          </div>
+        </div>
+
+        <div class="inventory-table-wrapper mt-sm">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>Asset ID</th>
+                <th>Type</th>
+                <th>Owner</th>
+                <th>Private data</th>
+                <th>Security summary</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FIN-SQL-01</td>
+                <td>Server</td>
+                <td>Finance IT</td>
+                <td>Yes</td>
+                <td>Encrypted at rest, patched weekly</td>
+                <td><span class="inventory-tag tag-good">Compliant</span></td>
+              </tr>
+              <tr>
+                <td>HR-LAP-07</td>
+                <td>Computer</td>
+                <td>HR</td>
+                <td>Yes</td>
+                <td>Disk encryption enabled, OS near end‑of‑life</td>
+                <td><span class="inventory-tag tag-watch">Review</span></td>
+              </tr>
+              <tr>
+                <td>EDGE-FW-01</td>
+                <td>Network</td>
+                <td>Network team</td>
+                <td>No</td>
+                <td>Firmware unknown, config backup missing</td>
+                <td><span class="inventory-tag tag-risk">At risk</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="hero-footnote" style="margin-top:10px;">
+          Note: all values are illustrative only. In the final system this page would pull live
+          information from the questionnaire responses or from the back-end data store.
+        </p>
+      </div>
+
+      <aside class="hero-panel" aria-label="Summary metrics">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Summary metrics</div>
+            <div class="panel-subtitle">Example layout for reporting widget</div>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+
+        <div class="asset-summary-grid">
+          <div class="asset-chip">
+            <div class="asset-label">Computers</div>
+            <div class="asset-value">54</div>
+            <div class="asset-trend">82% compliant</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">Servers</div>
+            <div class="asset-value">23</div>
+            <div class="asset-trend">91% compliant</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">Network devices</div>
+            <div class="asset-value">19</div>
+            <div class="asset-trend">74% compliant</div>
+          </div>
+          <div class="asset-chip">
+            <div class="asset-label">Storage systems</div>
+            <div class="asset-value">32</div>
+            <div class="asset-trend">88% compliant</div>
+          </div>
+        </div>
+
+        <div class="compliance-bar-shell">
+          <div class="compliance-row">
+            <span>Overall compliance</span>
+            <span>86%</span>
+          </div>
+          <div class="compliance-bar">
+            <div class="compliance-fill"></div>
+          </div>
+        </div>
+
+        <div class="panel-footer">
+          <div class="panel-footer-text">
+            This panel visually represents the configuration inventory diagram Paul mentioned.
+          </div>
+          <a href="index.html" class="btn btn-ghost" style="padding-inline:14px;font-size:11px;">Back to home</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+  
+<footer class="site-footer">
+  Built for LSBU · Client: Digital Sanctuary · Team 14
+</footer>
+
+</div>
+</body>
+</html>
