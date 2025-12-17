@@ -1,0 +1,43 @@
+import React from "react";
+import { Radar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
+
+export default function ResultChart({ scores }) {
+  const labels = Object.keys(scores);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Compliance Score",
+        data: labels.map((k) => scores[k]),
+        fill: true,
+        backgroundColor: "rgba(30, 111, 179, 0.3)",
+        borderColor: "#1e6fb3",
+      },
+    ],
+  };
+
+  return (
+    <div className="bg-white p-6 rounded shadow">
+      <h3 className="font-semibold mb-3">Compliance Radar</h3>
+      <Radar data={data} />
+    </div>
+  );
+}
